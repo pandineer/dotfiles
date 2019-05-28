@@ -11,6 +11,7 @@
 ;;; packages
 (el-get-bundle go-mode)
 (el-get-bundle php-mode)
+(el-get-bundle slim-mode)
 
 ;;;;;;;;;;  package management with el-get  end   ;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
