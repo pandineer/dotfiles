@@ -20,3 +20,8 @@ setopt share_history
 if [ -e ".zshrc_ex" ]; then
     source .zshrc_ex
 fi
+
+# Aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
