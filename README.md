@@ -20,3 +20,7 @@ If the same name directory exists already, "Please remove or rename it" message 
 * CentOS
 * Ubuntu(WSL)
 * MacOS
+
+## Environment dependent settings
+
+If environment dependent settings are needed, put `.zshrc_ex` and write settings on it.
