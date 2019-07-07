@@ -15,3 +15,8 @@ compinit
 setopt inc_append_history
 # Share history
 setopt share_history
+
+# Load environment dependent zshrc
+if [ -e ".zshrc_ex" ]; then
+    source .zshrc_ex
+fi
