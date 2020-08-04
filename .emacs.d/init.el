@@ -82,5 +82,10 @@
 
 (add-hook 'before-save-hook 'gofmt-before-save)
 
+;;;;;;;;;;;;;;;;;;
+;;;;;; ruby ;;;;;;
+
+(setq ruby-insert-encoding-magic-comment nil)
+
 ;;;;;;;;;;  programming settings  end  ;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
