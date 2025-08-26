@@ -1,3 +1,6 @@
+# 表示が崩れる現象への対処
+cjkwidth off
+
 # Set escape key to "C-z"
 escape ^zz
 
