@@ -34,5 +34,6 @@
   "statusLine": {
     "type": "command",
     "command": "input=$(cat); current_dir=$(echo \"$input\" | jq -r '.workspace.current_dir'); model_name=$(echo \"$input\" | jq -r '.model.display_name'); dir_name=$(basename \"$current_dir\"); if git -C \"$current_dir\" rev-parse --git-dir > /dev/null 2>&1; then branch=$(git -C \"$current_dir\" branch --show-current 2>/dev/null || echo \"detached\"); if [ -n \"$(git -C \"$current_dir\" status --porcelain 2>/dev/null)\" ]; then status=\" ✗\"; else status=\" ✓\"; fi; git_info=\" (${branch}${status})\"; else git_info=\"\"; fi; cost_info=\"\"; if command -v npx > /dev/null 2>&1; then cost_output=$(echo \"$input\" | npx ccusage@latest statusline 2>/dev/null); if [ $? -eq 0 ] && [ -n \"$cost_output\" ]; then cost_info=\" | $cost_output\"; fi; fi; printf \"%s%s | %s%s\" \"$dir_name\" \"$git_info\" \"$model_name\" \"$cost_info\""
-  }
+  },
+  "model": "haiku"
 }
