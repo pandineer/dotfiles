@@ -14,7 +14,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "say claudeのタスクが完了しました && osascript -e 'display notification \"タスク完了!\" with title \"Claude\"'"
+            "command": "if [ \"$(uname)\" = \"Darwin\" ]; then say claudeのタスクが完了しました && osascript -e 'display notification \"タスク完了!\" with title \"Claude\"'; fi"
           }
         ]
       }
@@ -25,7 +25,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "say claudeが許可を求めています && osascript -e 'display notification \"許可を求めています\" with title \"Claude\"'"
+            "command": "if [ \"$(uname)\" = \"Darwin\" ]; then say claudeが許可を求めています && osascript -e 'display notification \"許可を求めています\" with title \"Claude\"'; fi"
           }
         ]
       }
