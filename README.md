@@ -14,6 +14,8 @@ If the same name directory exists already, "Please remove or rename it" message 
 * screen
 * zsh
 * emacs
+* mise
+* herdr
 
 ## Confirmed OS
 
