@@ -23,6 +23,26 @@ do
 	    name=$(basename "$config_item")
 	    target="$HOME/.config/$name"
 
+	    # ---- herdr: ソケットをUnixドメインソケット非対応のファイルシステム
+	    # (WSL2のDrvFsマウント配下等)に作らせないよう、ディレクトリ自体は
+	    # symlinkにせず、設定ファイルだけを実ディレクトリの中にlinkする ----
+	    if [[ "$name" == "herdr" && -d "$config_item" ]]; then
+		mkdir -p "$target"
+
+		for herdr_file in "$config_item"/*
+		do
+		    fname=$(basename "$herdr_file")
+		    # herdrが自分で生成するランタイムファイルはlinkしない
+		    case "$fname" in
+			session.json|*.log|*.sock) continue ;;
+		    esac
+		    ln -sfn "$herdr_file" "$target/$fname"
+		done
+
+		continue
+	    fi
+	    # -------------------------------------
+
 	    if [ -e "$target" ] || [ -L "$target" ]; then
 		read -p "$target already exists. overwrite? [Y/n] " answer
 		case $answer in
