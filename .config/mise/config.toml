@@ -4,3 +4,7 @@
 [tasks.hello-mise]
 description = "Say hello"
 run = "echo hello pandineer"
+
+[tasks."herdr:server:stop"]
+description = "herdrのserverを停止する"
+run = "herdr server stop"
