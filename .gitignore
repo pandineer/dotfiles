@@ -4,3 +4,6 @@
 .config/herdr/session.json
 .config/herdr/*.log
 .config/herdr/*.sock
+
+# mise local overrides (environment dependent settings)
+.config/mise/config.local.toml
