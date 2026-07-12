@@ -1,0 +1,6 @@
+# mise configuration
+# https://mise.jdx.dev/configuration.html
+
+[tasks.hello-mise]
+description = "Say hello"
+run = "echo hello pandineer"
