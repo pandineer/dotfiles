@@ -1,0 +1,19 @@
+onboarding = false
+# herdr configuration
+# https://herdr.dev/docs/configuration/
+
+[keys]
+# screenの escape (ctrl+z) に合わせる
+prefix = "ctrl+z"
+
+# screenのペイン分割/統合の感覚に合わせる (C-a |, C-a S, C-a Q)
+# 左右分割 (screen: C-a |)
+split_vertical = "prefix+|"
+# 上下分割 (screen: C-a S)
+split_horizontal = "prefix+shift+s"
+# 統合 (screen: C-a Q "only" 相当の完全一致機能はherdrに無いためzoomで代用。
+# デフォルトのprefix+zも残す)
+zoom = ["prefix+z", "prefix+shift+q"]
+
+[experimental]
+pane_history = false

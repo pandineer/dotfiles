@@ -1,1 +1,6 @@
 .zshrc_ex
+
+# herdr runtime files (regenerated on each run)
+.config/herdr/session.json
+.config/herdr/*.log
+.config/herdr/*.sock
